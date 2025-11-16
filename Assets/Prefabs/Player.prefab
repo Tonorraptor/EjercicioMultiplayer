@@ -132,9 +132,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   speed: 5
-  materialsPrefab:
+  materialPrefab:
   - {fileID: 2100000, guid: 6dc3e53346e91b2488cb22c64e659524, type: 2}
+  - {fileID: 2100000, guid: eb6b916f874df124da37290c5be32933, type: 2}
   - {fileID: 2100000, guid: 1509509bfa8b8c746a50412cf67c1d34, type: 2}
+  - {fileID: 2100000, guid: 02072adef2a462b46ae9ed56ec68c106, type: 2}
   nameText: {fileID: 5531270715746924560}
 --- !u!136 &2578638047933750214
 CapsuleCollider:
