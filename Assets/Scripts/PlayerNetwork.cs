@@ -20,6 +20,8 @@ public class PlayerNetwork : NetworkBehaviour
 
     private Renderer materialRenderer;
 
+    [SerializeField] private Camera playerCamera;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -29,6 +31,15 @@ public class PlayerNetwork : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         nameText.text = playerName.Value.ToString();
+
+        base.OnNetworkSpawn();
+
+        if (IsOwner)
+        {
+            playerCamera.enabled = true;
+        }
+        else playerCamera.enabled = false;
+
         playerName.OnValueChanged += (oldValue, newValue) =>
         {
             nameText.text = newValue.ToString();
